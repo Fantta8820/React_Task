@@ -12,7 +12,7 @@ function Button(props) {
 
   return (
     <button
-      className={`h-8 w-full rounded-lg bg-slate-400 pl-4 text-left text-white ${props.task.IsCompleted && "line-through"}`}
+      className={`flex h-8 w-full items-center rounded-lg bg-slate-400 pl-2 text-left text-white ${props.task.IsCompleted && "line-through"}`}
       {...props}
     >
       {props.children}

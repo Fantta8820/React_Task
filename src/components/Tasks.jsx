@@ -1,4 +1,4 @@
-import { ChevronRightIcon, TrashIcon } from "lucide-react";
+import { ChevronRightIcon, TrashIcon, CheckIcon } from "lucide-react";
 import { onSeeDetailsClick } from "./../utils/tasks";
 import { useNavigate } from "react-router-dom";
 import Button from "./Button";
@@ -16,6 +16,7 @@ function ShowTasks({ hasTasks, props }) {
               type={"task"}
               task={task}
             >
+              {task.IsCompleted && <CheckIcon className="w-8" />}
               {task.id}. {task.title}
             </Button>
             <Button
